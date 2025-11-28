@@ -2,8 +2,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-.container {
+.header {
+    padding: 20px 0;
     width: 90%;
     margin: auto;
     display: flex;
@@ -11,14 +11,10 @@ body {
     align-items: center;
 }
 
-.header {
-    padding: 20px 0;
-}
-
 .titre {
     text-align: center;
 }
-.hero {
+.info {
     width: 90%;
     margin: auto;
     display: flex;
@@ -29,16 +25,22 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
 }
-
+.hero {
+    text-align: center;
+}
+.boutonHero {
+    text-align: center;
+    justify-content: center;
+}
 .boutonHero {
     margin-top: 15px;
     padding: 10px 20px;
-    border: none;
-    background: #503d2c;
+    border-radius: 5px;
+    background: #6b421f;
     color: white;
     cursor: pointer;
     transition: transform 0.3s;
-    
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.726);
 }
 
 .boutonHero:hover {
@@ -46,35 +48,40 @@ body {
     transform: scale(1.02);
 }
 
-.sectionCartes {
-    display: flex;                    
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-    margin: 0;
-}
-.colonneGauche,
-.colonneDroite {
+.grilleCartes {
     display: flex;
-    flex-direction: column;         
-    width: 40%;                   
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-.carte1,
-.carte2,
-.carte3,
-.carte4 {
-    border: 1px solid #e2effa;
-    border-radius: 12px;
-    padding: 15px;
-    margin-bottom: 20px;
-    transition: transform 0.3s;
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 48%;
+}
+
+.carte {
     background-color: #571053;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 100%;
 }
-.carte1:hover,
-.carte2:hover,
-.carte3:hover,
-.carte4:hover {
-    transform: scale(1.02);
+
+.carte:hover,
+.carte:focus {
+    transform: scale(1.03);
+    background-color: #6f1b69;
 }
 .duree {
     display: inline-block; /* Pour que le padding fonctionne correctement */
@@ -84,7 +91,11 @@ body {
     border: 1px solid #d6e3ee;
 }
 .fonctionnement {
-    padding: 40px 0;
+    padding: 70px;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .fonctionnement1 {
@@ -92,12 +103,15 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #e67a1c;
+    border-radius: 20px;
 }
 
 .etapes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap : 120px;
     width: 100%;
+    border-radius: 80px;
 }
 
 .etape {
@@ -114,31 +128,28 @@ body {
 }
 
 .infos {
-    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6f1b69;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .encadre {
-    border: 1px solid #ddd;
     padding: 20px;
     border-radius: 0px;
-    background: #9e2929;
 }
 /* pour les écrans de moins de 768px de large */
-@media (max-width: 768px) { 
-    .sectionCartes {
-        flex-direction: column; /* empile les colonnes */
-        align-items: center;    /* centre la colonne */
+@media (max-width: 768px) {
+    .grilleCartes {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .colonneGauche,
-    .colonneDroite {
-        width: 100%;            /* pleine largeur sur mobile */
-    }
-
-    .carte1,
-    .carte2,
-    .carte3,
-    .carte4 {
-        width: 90%;             /* marge sur les côtés */
+    .colonne {
+        width: 100%;
     }
 }
