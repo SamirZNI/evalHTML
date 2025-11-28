@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.titre {
+    text-align: center;
+}
+.hero {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #30449e;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.boutonHero {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #503d2c;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+    
+}
+
+.boutonHero:hover {
+    background: #571053;
+    transform: scale(1.02);
+}
+
+.sectionCartes {
+    display: flex;                    
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin: 0;
+}
+.colonneGauche,
+.colonneDroite {
+    display: flex;
+    flex-direction: column;         
+    width: 40%;                   
+}
+.carte1,
+.carte2,
+.carte3,
+.carte4 {
+    border: 1px solid #e2effa;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    background-color: #571053;
+}
+.carte1:hover,
+.carte2:hover,
+.carte3:hover,
+.carte4:hover {
+    transform: scale(1.02);
+}
+.duree {
+    display: inline-block; /* Pour que le padding fonctionne correctement */
+    margin-top: 8px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #d6e3ee;
+}
+.fonctionnement {
+    padding: 40px 0;
+}
+
+.fonctionnement1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e67a1c;
+}
+
+.etapes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.etape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numero {
+    background: #571053;
+    color: white;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.infos {
+    padding: 40px 0;
+}
+
+.encadre {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 0px;
+    background: #9e2929;
+}
+/* pour les écrans de moins de 768px de large */
+@media (max-width: 768px) { 
+    .sectionCartes {
+        flex-direction: column; /* empile les colonnes */
+        align-items: center;    /* centre la colonne */
+    }
+
+    .colonneGauche,
+    .colonneDroite {
+        width: 100%;            /* pleine largeur sur mobile */
+    }
+
+    .carte1,
+    .carte2,
+    .carte3,
+    .carte4 {
+        width: 90%;             /* marge sur les côtés */
+    }
+}
